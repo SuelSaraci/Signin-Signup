@@ -107,9 +107,6 @@ form.sign-in-form {
   font-size: 1rem;
 }
 
-.social-media {
-}
-
 .social-icon {
   height: 46px;
   width: 46px;
@@ -271,14 +268,14 @@ form.sign-in-form {
   pointer-events: all;
 }
 
-@media (max-width: 870px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     min-height: 800px;
     height: 100vh;
   }
   .signin-signup {
     width: 100%;
-    top: 95%;
+    top: 80%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
@@ -294,6 +291,7 @@ form.sign-in-form {
   }
 
   .panel {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -313,10 +311,11 @@ form.sign-in-form {
     width: 200px;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
+    display: none;
   }
 
   .panel .content {
-    padding-right: 15%;
+    padding-right: 0%;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.8s;
   }
@@ -338,9 +337,9 @@ form.sign-in-form {
 
   .container:before {
     width: 1500px;
-    height: 1500px;
+    height: 1600px;
     transform: translateX(-50%);
-    left: 30%;
+    left: 50%;
     bottom: 68%;
     right: initial;
     top: initial;
@@ -369,7 +368,7 @@ form.sign-in-form {
   }
 
   .container.sign-up-mode .signin-signup {
-    top: 5%;
+    top: 20%;
     transform: translate(-50%, 0);
   }
 }
@@ -400,30 +399,31 @@ form.sign-in-form {
   }
 }
 
-#register, #login-form {
+#register,
+#login-form {
   padding: 0 0 5% 0;
   background: url("assets/background.png") no-repeat;
   background-size: cover;
 }
 
-#login-form{
+#login-form {
   padding: 10% 0;
 }
 
-#register .upload-profile-image{
+#register .upload-profile-image {
   position: relative;
   text-align: center;
-  transition: filter .8s ease;
+  transition: filter 0.8s ease;
 }
 #register p {
   color: gray;
 }
 
-#register .upload-profile-image:hover{
+#register .upload-profile-image:hover {
   filter: drop-shadow(1px 1px 22px #7584bb);
 }
 
-#upload-profile{
+#upload-profile {
   position: absolute;
   top: 0;
   z-index: 10;
@@ -433,12 +433,12 @@ form.sign-in-form {
   left: 0;
 }
 
-#upload-profile::-webkit-file-upload-button{
+#upload-profile::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-#upload-profile::before{
-  content: ' ';
+#upload-profile::before {
+  content: " ";
   display: inline-block;
   width: 200px;
   height: 200px;
@@ -446,7 +446,7 @@ form.sign-in-form {
   border-radius: 50%;
 }
 
-#register .upload-profile-image .camera-icon{
+#register .upload-profile-image .camera-icon {
   position: absolute;
   top: 70px;
   width: 60px !important;
@@ -454,29 +454,29 @@ form.sign-in-form {
   right: 35%;
 }
 
-#register .upload-profile-image:hover .camera-icon{
+#register .upload-profile-image:hover .camera-icon {
   filter: invert(100%) !important;
 }
 
 .icon {
-	position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 img.rounded-circle {
-	width: 200px;
-	height: 200px;
-	position: relative;
+  width: 200px;
+  height: 200px;
+  position: relative;
 }
 
 .button-upload {
-	width: 100%;
-	margin-top: 30px;
-	text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .alert {
-	margin-top: -30px;
-    text-align: center;
-    text-transform: capitalize;
+  margin-top: -30px;
+  text-align: center;
+  text-transform: capitalize;
 }

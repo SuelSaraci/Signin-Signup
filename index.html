@@ -1,5 +1,5 @@
 <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="./css/style.css" />
 <title>Sign in & Sign up Form</title>
 </head>
 
@@ -45,22 +45,7 @@
                     </div>
                   </form>
                   
-                   <?php
-                     if(isset($_POST['btn'])){
-                        $image=$_FILES['image']['name']; 
-                        $imageArr=explode('.',$image);
-                        $rand=rand(10000,99999);
-                        $newImageName=$imageArr[0].$rand.'.'.$imageArr[1];
-                        $uploadPath="uploads/".$newImageName;
-                        $isUploaded=move_uploaded_file($_FILES["image"]["tmp_name"],$uploadPath);
-                        if($isUploaded) {
-                            echo '<div class="alert">successfully file uploaded</div>';
-							//echo "<script>window.alert('po more');</script>";
-                        } else {
-                            echo '<div class="alert">something went wrong</div>';
-                        }
-                     }
-                   ?>
+                   
                 <form action="#" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
